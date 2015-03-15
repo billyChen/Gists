@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GistGitHub</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <header>
+      <table>
+        <tr>
+          <td>
+            <%= image_tag("logo_github_gist.png", id: "logo") %>
+          </td>
+        </tr>
+      </table>
+
+    </header>
+
+    <section>
+      <%= yield %>
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

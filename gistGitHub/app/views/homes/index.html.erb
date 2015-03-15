@@ -1,0 +1,16 @@
+<div id="main">
+  <div class="baseline"></div>
+  <div id="all_content">
+    <div id="element">
+      <ul>
+        <li><%= link_to("Gists saved", homes_list_path) %></li>
+      </ul>
+    </div>
+    <div id="mainForm">
+        <%= form_tag(search_index_path, method: :get) do %>
+            <input id="main_input"  type="text" name="q" placeholder="Search gists by id" autocomplete="off" />
+          <%= submit_tag("Search", id: "submit") %>
+      <% end %>
+    </div>
+  </div>
+</div>

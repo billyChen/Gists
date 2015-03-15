@@ -1,0 +1,28 @@
+<div id="back">
+  <%= link_to("back", homes_index_path) %>
+</div>
+<div id="gistContentList">
+  <h1>Saved Gists</h1>
+  <% count = 0 %>
+  <% if @list.empty? %>
+      <p>No gist saved ! </p>
+      <% end %>
+<% @list.each do |g| %>
+      <div class="global<%= count %>">
+        <div id="userInfosList">
+            <p>
+                <%= image_tag(g.url, id: "profilePic") %> <%= g.username %> / <%= g.title %>
+            </p>
+        </div>
+        <div id="gistCodeList">
+            <%= g.description %>
+        </div>
+        <%= link_to("Delete gist", homes_delete_path(:id => g.id), id: "deleteButton", method: :get) %>
+      </div>
+      <% if count == 1 %>
+        <% count = 0 %>
+      <% else %>
+        <% count = 1 %>
+      <% end %>
+<% end %>
+</div>

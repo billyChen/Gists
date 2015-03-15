@@ -1,0 +1,73 @@
+// Place all the styles related to the Search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#back {
+  font-size: 2em;
+}
+
+#gistContent {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+#userInfos {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#userInfos p {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#profilePic {
+  width: 25%;
+}
+
+#gistCode {
+  min-height: 50%;
+  text-align: center;
+  border: 1px dashed gray;
+}
+
+#buttonSave {
+  margin-bottom: 100px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#buttonSave input {
+  width: 40%;
+  height: 30px;
+}
+
+#savedItem {
+  border: 1px dashed black;
+  width: 50%;
+  margin: auto;
+}
+
+#savedItem p {
+  font-size: 2em;
+}
+
+#savedItem table td {
+  width: 50%;
+}
+
+#backToHome {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#backToHome input {
+  width: 20%;
+  margin: auto;
+}

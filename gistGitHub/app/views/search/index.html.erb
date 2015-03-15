@@ -1,0 +1,29 @@
+
+<% begin %>
+    <div id="gistContent">
+      <div id="back">
+        <%= link_to("back", homes_index_path) %>
+      </div>
+      <div id="userInfos">
+        <p>
+          <%= image_tag(@user_avatar, id: "profilePic") %> <%= @user_login %> / <%= @title %>
+        </p>
+      </div>
+      <div id="gistCode">
+        <% if @error.nil? %>
+            <%= @content %>
+        <% else %>
+            <%= @error %>
+        <% end %>
+      </div>
+      <div id="buttonSave">
+        <% if @error.nil? %>
+        <%= button_to("Save gist", search_save_path(:title => @title,
+                                                    :user_avatar => @user_avatar,
+                                                    :user_login => @user_login)) %>
+        <% end %>
+      </div>
+    </div>
+<% rescue %>
+ <%= @error %>
+<% end %>

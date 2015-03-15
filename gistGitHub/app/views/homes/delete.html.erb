@@ -1,0 +1,8 @@
+<div id="deleteContent">
+    <% if !@error.nil? %>
+        <%= @error %>
+    <% else %>
+     <p>Gist removed correctly ! </p>
+      <%= button_to("Back", homes_list_path, method: :get) %>
+    <% end %>
+</div>

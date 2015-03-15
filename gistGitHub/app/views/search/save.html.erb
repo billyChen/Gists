@@ -1,0 +1,23 @@
+<div id="savedItem">
+    <% if @error == nil %>
+        <p>Gist saved ! </p>
+      <table>
+        <tr>
+            <td>Title:</td> <td><%= params[:title]%></td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><%= params[:user_login]%></td>
+        </tr>
+        <tr>
+          <td>Content: </td>
+          <td><%= @description %></td>
+        </tr>
+      </table>
+  <% else %>
+        <%= @error %>
+    <% end %>
+</div>
+<div id="backToHome">
+    <%= button_to("Back", homes_index_path, method: :get) %>
+</div>
